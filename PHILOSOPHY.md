@@ -1,19 +1,26 @@
-# Philosophy: Trench Warfare Learning
+# Philosophy: Learn, Build, Test, Break
 
-## Why "Training -> Exam -> Practicality" fails
+## Why reading alone fails
 
-Tutorials teach a mechanism before you feel the pain it removes. You memorize `sync.Mutex`, pass the quiz, and forget it, because nothing ever corrupted your data.
+Tutorials teach a mechanism and stop. You memorize `sync.Mutex`, pass the quiz, and forget it, because nothing you built ever corrupted its data.
 
-## The loop
+## Why "thrown in the deep end" fails too
 
-1. **Constrain** - tiny CPU and RAM limits, so limits are reached in seconds.
-2. **Crash** - a naive system meets a hostile load.
-3. **Diagnose** - logs, `-race`, `pprof`, `EXPLAIN ANALYZE`, `docker stats`. Evidence first.
-4. **Re-Architect** - you write the fix, and you name the new weakness it creates.
+This repo first tried the opposite: broken code, an attack, no explanations. Without the basics, that isn't learning; it's guessing. You can't diagnose a nil-map panic in a language whose syntax you can't read yet.
+
+## The cycle
+
+1. **Learn**: one concept, explained with comparisons to languages you already know.
+2. **Build**: write it yourself, from a stub.
+3. **Test**: prove it does what the spec says.
+4. **Break**: attack tests hit the edges: boundaries, huge numbers, real-world text, concurrency, load. Find out where your code fails, and fix it.
+
+Then repeat with a slightly harder concept. Each lesson stands on the previous one.
 
 ## Rules
 
-* Agency over academia: theory is introduced only after the system has died of its absence.
-* The AI is the adversary and chaos engineer, never the tutor who hands over the fix.
-* A trench is not complete until the post-mortem is written.
-* Every fix has a cost. Record it.
+* Start from the barebones. Complexity grows only once the current level feels solid.
+* The AI is a tutor who explains anything but never hands over the solution. Writing it is the learning.
+* Breaking things is part of every lesson, in small doses, not a final exam.
+* Support fades gradually. In the later system-design trenches you lead the diagnosis yourself.
+* Understanding is checked, not assumed: a short quiz and a written recap close every lesson.

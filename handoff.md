@@ -1,3 +1,5 @@
+> **Superseded in part (2026-11-01).** This is the original blueprint. Its strict "adversary, no explanations" approach and the Trench 0 "Go Gauntlet" were replaced by a tutor-led Go track (`go-track/`) using a Learn → Build → Test → Break cycle, with support fading through the later trenches. Current rules: [AGENTS.md](AGENTS.md). The original state is preserved at git tag `original-gauntlet`.
+
 # HANDOFF.MD — System Design & Go "Trench Warfare" Blueprint
 
 ## 1. User Profile & Learning Philosophy
